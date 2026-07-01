@@ -1,0 +1,25 @@
+{
+  "name": "pulse-sanity",
+  "version": "1.0.0",
+  "description": "Playwright E2E sanity suite for Vantage Pulse Dashboard",
+  "scripts": {
+    "test": "npx playwright test --headed --workers=1 --project='Google Chrome' && npm run Launch_Reporter",
+    "test:headless": "npx playwright test --workers=1 --project='Google Chrome'",
+    "test:debug": "npx playwright test --debug --project='Google Chrome'",
+    "test:ui": "npx playwright test --ui",
+    "Launch_Reporter": "npx playwright show-report",
+    "install:browsers": "npx playwright install chrome",
+    "allure:generate": "allure generate allure-results --clean -o allure-report",
+    "allure:open": "allure open allure-report",
+    "allure:report": "npm run allure:generate && npm run allure:open",
+    "testcases": "node generate-testcases.js"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.44.0",
+    "allure-playwright": "^3.0.0",
+    "allure-commandline": "^2.30.0"
+  },
+  "keywords": ["playwright", "automation", "vantage-circle", "e2e"],
+  "author": "",
+  "license": "ISC"
+}

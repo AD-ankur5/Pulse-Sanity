@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+
+# Playwright output
+test-results/
+playwright-report/
+playwright/.cache/
+blob-report/
+
+# Allure output
+allure-results/
+allure-report/
+allure-single/
+
+# Generated test artifacts
+screenshots/
+*.png
+*.webm
+*.zip
+trace.zip
+testcases-report.html
+
+# Scratch / debug
+scratch-*.yaml
+scratch-*.json
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+*.log
+
+# Local secrets
+.env
